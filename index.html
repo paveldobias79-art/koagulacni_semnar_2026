@@ -345,17 +345,36 @@
       border-radius: var(--radius);
       padding: 1.8rem;
       max-width: 720px;
-      margin-top: 1.5rem;
+      margin: 1.5rem auto 0;
     }
-    .payment-highlight p { color: rgba(255,255,255,.85); line-height: 1.75; font-size: 1rem; }
+    .payment-highlight p { color: rgba(255,255,255,.85); line-height: 1.75; font-size: 1rem; text-align: left; text-align-last: left; }
     .payment-highlight strong { color: var(--steel-light); }
-    .payment-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; margin-top: 2.5rem; }
+    .payment-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; margin: 2.5rem auto 0; max-width: 900px; align-items: stretch; }
     .payment-step {
-      background: rgba(255,255,255,.07);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(140,165,213,.2);
       border-radius: var(--radius);
-      padding: 1.4rem;
+      padding: 1.5rem 1.3rem;
       text-align: center;
       min-width: 0;
+      margin: 0 .7rem;
+    }
+    .payment-step:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: -1.05rem;
+      width: .7rem;
+      height: .7rem;
+      border-top: 2px solid var(--steel);
+      border-right: 2px solid var(--steel);
+      transform: translateY(-50%) rotate(45deg);
+      opacity: .55;
     }
     .ps-num {
       width: 34px; height: 34px;
@@ -363,10 +382,10 @@
       border-radius: 50%;
       display: flex; align-items: center; justify-content: center;
       font-weight: 800; font-size: .95rem;
-      margin: 0 auto .7rem;
+      margin: 0 auto .8rem;
       color: var(--navy);
     }
-    .payment-step p { color: rgba(255,255,255,.75); font-size: .86rem; line-height: 1.55; }
+    .payment-step p { color: rgba(255,255,255,.8); font-size: .86rem; line-height: 1.55; }
 
     /* ─── Lecturer ─── */
     #lecturer { background: var(--white); }
@@ -572,7 +591,13 @@
       .lecturer-card { flex-direction: column; align-items: center; text-align: center; }
       .nav-links { display: none; }
       .hero-meta { gap: .8rem; flex-direction: column; align-items: center; }
-      .payment-steps { grid-template-columns: 1fr; }
+      .payment-steps { grid-template-columns: 1fr; gap: 1rem; }
+      .payment-step { margin: 0; }
+      .payment-step:not(:last-child)::after {
+        top: auto; right: auto;
+        bottom: -.85rem; left: 50%;
+        transform: translateX(-50%) rotate(135deg);
+      }
       .top-banner img { height: 40px; }
       .footer-banner img { height: 35px; }
       .img-photo img { height: 220px; }
@@ -862,7 +887,7 @@
       </div>
       <div class="payment-step">
         <div class="ps-num">3</div>
-        <p data-text-id="payment_step3">Sami určíte výši úhrady a&nbsp;vyžádáte fakturu nebo kurs pro&nbsp;vás zůstane bezplatný.</p>
+        <p data-text-id="payment_step3">Sami určíte výši úhrady a&nbsp;vyžádáte fakturu, nebo kurs zůstane bezplatný.</p>
       </div>
     </div>
   </div>
