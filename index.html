@@ -326,6 +326,8 @@
     #location { background: var(--sky); }
     .location-intro { margin-bottom: 1.8rem; }
     .location-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
+    .soft-note { font-size: .82rem; font-style: italic; font-weight: 600; color: var(--orange); line-height: 1.65; margin-top: 1.2rem; }
+    .soft-note a { color: var(--orange); text-decoration: underline; }
     .location-facts { display: flex; flex-direction: column; gap: 1rem; }
     .location-fact {
       display: flex; gap: 1rem; align-items: flex-start;
@@ -864,6 +866,7 @@
         <span class="img-caption" data-text-id="location_caption">ÚV Bedřichov, Jizerské hory</span>
       </div>
     </div>
+    <p class="soft-note" data-text-id="location_accommodation_note">(Ubytování si objednává každý účastník sám v&nbsp;Penzionu Vodárna Bedřichov, kde jsou pro&nbsp;náš kurz zamluveny pokoje. Kontakt: mobil <a href="tel:+420702174401">+420 702 174 401</a>, <a href="mailto:recepce@vodarnabedrichov.cz">recepce@vodarnabedrichov.cz</a>. Ubytování a&nbsp;stravování si hradí každý účastník sám.)</p>
   </div>
 </section>
 
@@ -932,7 +935,8 @@
   <div class="container">
     <span class="section-label" data-text-id="contact_label">Přihlášení</span>
     <h2 data-text-id="contact_h2">Mám zájem o&nbsp;účast</h2>
-    <p style="color:var(--text-mid); margin-bottom:1.8rem; font-size:.93rem;" data-text-id="contact_accommodation_note">Informace o&nbsp;možnostech a&nbsp;cenách ubytování v&nbsp;hotelu najdete v&nbsp;<a href="https://www.vodarnabedrichov.cz/cs/ubytovani/cenik/" target="_blank" rel="noopener" style="color:var(--navy); font-weight:600;">ceníku ubytování</a>.</p>
+    <p style="color:var(--text-mid); margin-bottom:.5rem; font-size:.93rem;" data-text-id="contact_accommodation_note">Informace o&nbsp;možnostech a&nbsp;cenách ubytování v&nbsp;hotelu najdete v&nbsp;<a href="https://www.vodarnabedrichov.cz/cs/ubytovani/cenik/" target="_blank" rel="noopener" style="color:var(--navy); font-weight:600;">ceníku ubytování</a>.</p>
+    <p class="soft-note" style="margin-top:0; margin-bottom:1.8rem;" data-text-id="contact_accommodation_note2">(Ubytování si objednává každý účastník sám v&nbsp;Penzionu Vodárna Bedřichov, kde jsou pro&nbsp;náš kurz zamluveny pokoje. Kontakt: mobil <a href="tel:+420702174401">+420 702 174 401</a>, <a href="mailto:recepce@vodarnabedrichov.cz">recepce@vodarnabedrichov.cz</a>. Ubytování a&nbsp;stravování si hradí každý účastník sám.)</p>
     <div class="variant-toggle">
       <button class="vtoggle-btn active" onclick="showVariant('email',this)">Kontakt e-mailem</button>
       <button class="vtoggle-btn" onclick="showVariant('form',this)">Registrační formulář</button>
